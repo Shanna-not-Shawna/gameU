@@ -2,13 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
 
-User.init(
+Game.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,19 +11,19 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    image: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       validate: {
-        isEmail: true,
+        isUrl: true,
       },
     },
-    password: {
+    slug: {  //slug is a unique identifier from the api
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -38,21 +33,21 @@ User.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (newGameData) => {
+        newGameData.password = await bcrypt.hash(newGameData.password, 10);
+        return newGameData;
       },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
+      beforeUpdate: async (updatedGameData) => {
+        updatedGameData.password = await bcrypt.hash(updatedGameData.password, 10);
+        return updatedGameData;
       },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'Game',
   }
 );
 
-module.exports = User;
+module.exports = Game;
