@@ -1,24 +1,24 @@
-const router = require('express').Router();
-const {  } = require('../../models');
+const router = require("express").Router();
+const { } = require("../../models");
 
 
-router.get('/', (req, res) => {
-
-});
-
-router.get('/:id', (req, res) => {
+router.get("/", (req, res) => {
 
 });
 
-router.post('/', (req, res) => {
+router.get("/:id", (req, res) => {
 
 });
 
-router.put('/:id', (req, res) => {
+router.post("/", (req, res) => {
+
 });
 
-router.delete('/:id', (req, res) => {
-  
+router.put("/:id", (req, res) => {
+});
+
+router.delete("/:id", (req, res) => {
+
 });
 
 module.exports = router;
