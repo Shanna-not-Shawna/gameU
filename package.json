@@ -8,6 +8,7 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js",
     "lint": "npx eslint **/*.js"
+
   },
   "keywords": [],
   "author": "",

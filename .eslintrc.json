@@ -6,7 +6,9 @@
     "node": true,
     "es6": true,
     "es2017": true
-
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
   },
   "rules": {
     "no-undef-init": "error",
