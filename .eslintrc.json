@@ -7,6 +7,9 @@
     "es6": true,
     "es2017": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "rules": {
     "no-undef-init": "error",
     "no-duplicate-case": "error",
@@ -29,7 +32,6 @@
     "no-redeclare": "error",
     "brace-style": "error",
     "indent": ["error", 2],
-    "quotes": ["error", "double"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "radix": "off"
