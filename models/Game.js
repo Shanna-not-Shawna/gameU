@@ -1,6 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
+
+class Game extends Model {}
 
 
 Game.init(
@@ -23,7 +25,7 @@ Game.init(
         isUrl: true,
       },
     },
-    slug: {  //slug is a unique identifier from the api
+    slug: { //slug is a unique identifier from the api
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -46,7 +48,7 @@ Game.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Game',
+    modelName: "game",
   }
 );
 
