@@ -19,18 +19,18 @@ Game.init(
     image: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique: true,
+      // unique: true,
       validate: {
         isUrl: true,
       },
     },
-    slug: { //slug is a unique identifier from the api
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
-    },
+    // slug: { //slug is a unique identifier from the api
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [8],
+    //   },
+    // },
   },
   {
 
