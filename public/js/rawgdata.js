@@ -58,6 +58,14 @@ function gameSearch(event) {
         h2.textContent = game.name;
         button.textContent = "Make a post";
 
+        button.addEventListener("click", ()=> {
+          const imgUrl = game.background_image;
+          const gameTitle = game.name;
+          console.log(imgUrl);
+          console.log(gameTitle);
+        });
+
+
 
         gameContainer.append(card);
         card.append(img);
@@ -72,6 +80,8 @@ function gameSearch(event) {
     });
 }
 document.querySelector("#game-search-form").addEventListener("submit", gameSearch);
+
+
 
 /* <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
@@ -90,3 +100,4 @@ document.querySelector("#game-search-form").addEventListener("submit", gameSearc
 // need slug, name and background_image url string
 
 // https://api.rawg.io/api/games?key=758f0fb8bc1741f39e2f3777d1996684&page_size=10&search=%22mario%22
+
