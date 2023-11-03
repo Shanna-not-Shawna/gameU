@@ -22,17 +22,12 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">TITLE</a>
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/dashboard">Dashboard</a>
-          </li>
+    <section class='right-container'>
+    <div class='nav'>
+      <button class='main-forum'>Main Forum</button>
+      <button class='games'>Games</button>
+      <button class='myProfile'>My Profile</button>
+    </div>
           <li>
             {{#if logged_in}}
             <a href="/profile">profile</a> |
