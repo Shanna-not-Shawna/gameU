@@ -4,6 +4,9 @@ const rating = '&metacritic=97,100';
 const numRes = '&page_size=10';
 const url = `${apiUrl}${apiKey}${numRes}`;
 const url2 = `${apiUrl}${apiKey}${rating}${numRes}`;
+const gameContainer = document.querySelector("#requested-games")
+gameContainer.setAttribute('style', 'display: flex; flex-wrap: wrap;')
+
 
 // top 10 query
 fetch(url)
@@ -16,7 +19,7 @@ fetch(url)
     .then(data => {
         console.log(data)
         const slug = response.slug;
-        const title = response.slug;
+        const title = response.name;
         const image = response.background_image;
 
 
@@ -38,7 +41,30 @@ function gameSearch(event) {
         })
         .then(data => {
             console.log(data)
+for (let i = 0; i < data.results.length; i++) {
+    const game = data.results[i];
+    const card = document.createElement('div')
+    const img = document.createElement('img')
+    const h2 = document.createElement('h2')
+    const p = document.createElement('p')
+    const button = document.createElement('button')
 
+    card.classList.add('card')
+    card.style.width='22rem'
+    img.classList.add('card-img-top')
+
+    img.setAttribute('src', game.background_image)
+    img.style.height='200px'
+    h2.textContent = game.name
+    button.textContent = 'Make a post'
+
+
+    gameContainer.append(card)
+    card.append(img)
+    card.append(h2)
+    card.append(button)
+    
+}
 
         })
         .catch(error => {
@@ -46,6 +72,14 @@ function gameSearch(event) {
         });
 }
 document.querySelector('#game-search-form').addEventListener('submit', gameSearch)
+
+{/* <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> */}
+
 // API calls: 
 // 1) top 8-10 games based on metacritic rating
 // need slug, name and background_image url string
