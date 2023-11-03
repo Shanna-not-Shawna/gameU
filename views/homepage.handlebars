@@ -1,7 +1,7 @@
-
+{{!-- {{log this}} --}}
 <header>
   <div>
-    <img src='./assets/images/ESPN_U_logo.svg.png' alt='GameU Logo' />
+    {{!-- <img src='./assets/images/ESPN_U_logo.svg.png' alt='GameU Logo' /> --}}
   </div>
 </header>
 
@@ -12,28 +12,35 @@
       <button>Search</button>
     </form>
 
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
-      fames ac turpis egestas.</p>
+    {{!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames ac turpis egestas.</p> --}}
   </section>
 
-{{log this}}
+
 
   <section class='right-container'>
-    <div class='nav'>
+    {{!-- <div class='nav'>
       <button class='main-forum'>Main Forum</button>
       <button class='games'>Games</button>
       <button class='myProfile'>My Profile</button>
-    </div>
+    </div> --}}
+    <main class='feed'>
 {{#each posts as |post|}}
-  <main class='feed'>
-    <div class='post'>
-      <h4>{{post.title}} by <b>{{post.user.name}}</b></h4>
+  
+    <div class='post card'>
+      <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
 
-      <p>{{post.content}}</p>
+      <h4 class="card-title">{{post.title}} by <b>{{post.user.name}}</b></h4>
+
+      <p class="card-text">{{post.content}}</p>
+      <span style='font-size:30px;'>&#128491;</span>
+      <a href="/post/{{post.id}}" class="btn btn-primary">Comments</a> 
+      {{!-- *trying to get this to show all post data and comment data underneath --}}
     </div>
     {{/each}}
   </main>
-    <aside class='news-card1'>
+    {{!-- <aside class='news-card1'>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
         fames ac turpis egestas.</p>
     </aside>
@@ -56,7 +63,7 @@
     <aside class='news-card5'>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
         fames ac turpis egestas.</p>
-    </aside>
+    </aside> --}}
   </section>
 
 </div>
