@@ -8,3 +8,8 @@ img {
     height: 200px;
     /* object-fit: cover; */
 }
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
