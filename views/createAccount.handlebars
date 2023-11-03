@@ -3,36 +3,14 @@
     <div class='modal-content'>
       <form class='modal-body'>
         <h5 class='modal-title mb-3'>Create an Account</h5>
-        <label for='firstName' class='sr-only'>First Name</label>
+        
+        <label for='name' class='sr-only'>User Name</label>
         <input
           type='text'
           class='form-control mb-3'
-          id='firstName'
-          placeholder='First Name'
+          id='name-signup'
+          placeholder='User Name'
           required
-          value='{{firstName}}'
-        />
-        
-
-        <label for='lastName' class='sr-only'>Last Name</label>
-        <input
-          type='text'
-          class='form-control mb-3'
-          id='lastName'
-          placeholder='Last Name'
-          required
-          value='{{lastName}}'
-        />
-        
-
-        <label for='phoneNumber' class='sr-only'>Phone Number</label>
-        <input
-          type='tel'
-          class='form-control mb-3'
-          id='phoneNumber'
-          placeholder='Phone Number'
-          required
-          value='{{phoneNumber}}'
         />
         
 
@@ -40,10 +18,9 @@
         <input
           type='email'
           class='form-control mb-3'
-          id='email'
+          id='email-signup'
           placeholder='Email Address'
           required
-          value='{{email}}'
         />
         
 
@@ -51,21 +28,9 @@
         <input
           type='password'
           class='form-control mb-3'
-          id='password'
+          id='password-signup'
           placeholder='Password'
           required
-          value='{{password}}'
-        />
-        
-
-        <label for='confirmPassword' class='sr-only'>Confirm Password</label>
-        <input
-          type='password'
-          class='form-control mb-4'
-          id='confirmPassword'
-          placeholder='Confirm Password'
-          required
-          value='{{confirmPassword}}'
         />
         
 
@@ -74,3 +39,4 @@
     </div>
   </div>
 </main>
+<script src="/js/signup.js"></script>
