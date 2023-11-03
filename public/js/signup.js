@@ -14,8 +14,10 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      console.log("sign up success!");
+      document.location.replace("/");
     } else {
+      console.log("failed");
       alert(response.statusText);
     }
   }
