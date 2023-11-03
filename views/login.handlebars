@@ -1,18 +1,17 @@
-
-  <form class="modal-content">
-    <main class="modal-header">
-      <h5 class="modal-title">Login</h5>
-    </div>
+<main class="modal-header container">
+  <h5 class="modal-title">Login</h5>
+  <form class="modal-content login-form">
     <div class="modal-body">
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter your username" required value="{{username}}">
+        <label for="email">email:</label>
+        <input type="text" class="form-control" id="email-login" placeholder="Enter your email" required />
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter your password" required value="{{password}}">
-      <button type="submit" class="btn btn-primary">Login</button>
-    </main>
+        <input type="password" class="form-control" id="password-login" name="password" autocomplete="on"
+          placeholder="Enter your password" required />
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </div>
   </form>
-
-  
+</main>
