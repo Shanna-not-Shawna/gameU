@@ -106,26 +106,3 @@ function gameSearch(event) {
 document.querySelector("#game-search-form").addEventListener("submit", gameSearch);
 document.addEventListener("DOMContentLoaded", gamesLoad);
 
-<<<<<<< HEAD
-=======
-
-
-/* <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div> */
-
-// API calls:
-// 1) top 8-10 games based on metacritic rating
-// need slug, name and background_image url string
-
-// https://api.rawg.io/api/games?key=758f0fb8bc1741f39e2f3777d1996684&page_size=10&metacritic=97,100
-
-// 2) search for a title on RAWG via search box on homepage
-// need slug, name and background_image url string
-
-// https://api.rawg.io/api/games?key=758f0fb8bc1741f39e2f3777d1996684&page_size=10&search=%22mario%22
-
->>>>>>> 87032821d7b39d516a5f36f90f337736a37dcda4
