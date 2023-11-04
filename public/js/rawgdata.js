@@ -58,11 +58,28 @@ function gameSearch(event) {
         h2.textContent = game.name;
         button.textContent = "Make a post";
 
+
+        // *****logic for "make a post" button to save gameTitle and imgUrl to database
         button.addEventListener("click", ()=> {
           const imgUrl = game.background_image;
           const gameTitle = game.name;
-          console.log(imgUrl);
-          console.log(gameTitle);
+          // console.log(imgUrl);
+          // console.log(gameTitle);
+          fetch("/api/games", {
+            method: "POST",
+            body: JSON.stringify({ title: gameTitle, image: imgUrl }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("New game created:", data);
+              // You can update your UI or take any other actions here
+            })
+            .catch((error) => {
+              console.error("Error creating a new game:", error);
+            });
         });
 
 
