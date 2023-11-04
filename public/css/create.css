@@ -1,0 +1,11 @@
+header {
+    background-image: linear-gradient(to right,#FF5C00 , #00C5FF);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
