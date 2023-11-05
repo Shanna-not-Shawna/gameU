@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{log this}}
 <header>
 
@@ -37,6 +38,11 @@
 </header>
 
   <div class="search-container container-fluid">
+=======
+     
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+>>>>>>> 1770ac5318d3815e2a15e338f755b0e5abe79b31
         <form class="d-flex" role="search" id='game-search-form'>
         <input class="search-input form-control me-2" id='game-query' type="search" placeholder="Search" aria-label="Search">
         <button class="search-btn btn-outline-success" type="submit">Search</button>
@@ -47,11 +53,6 @@
 
 <div>
   <section class='top-section'>
-    {{!-- <form id='game-search-form'>
-      <input type='search' id='game-query' name='q' placeholder='Search...' />
-      <button>Search</button>
-    </form> --}}
-   
 <section id="requested-games"></section>
    
   </section>
@@ -68,7 +69,7 @@
 {{#each posts as |post|}}
   <div class="card-container">
     <div class='post card'>
-      <img src="{{post.game.image}}" class="card-img-top" alt="{{post.game.title}}">
+      <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
         <div class="card-body">
 
       <h4 class="card-title">{{post.title}} by <b>{{post.user.name}}</b></h4>
