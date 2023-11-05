@@ -4,7 +4,7 @@
 
   </aside>
 </section>
- 
+
 <section>
   <h2>{{name}}</h2>
   {{!-- <form id='form'>
@@ -12,14 +12,16 @@
     <button>Search</button>
   </form> --}}
   <main>
-   {{#each posts as |post|}}
+    {{#each posts as |post|}}
 
     <h2>Recent Posts</h2>
     <div class='your-post'>
-       <h4 class="card-title">{{post.title}}</h4>
+      <h4 class="card-title">{{post.title}}</h4>
       <p class="card-text">{{post.content}}</p>
+      <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
     </div>
-        {{/each}}
+    {{/each}}
 
   </main>
 </section>
+<script src="/js/newpost.js"></script>

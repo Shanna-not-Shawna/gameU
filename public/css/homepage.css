@@ -13,3 +13,9 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+.post-img {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%
+}
