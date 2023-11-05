@@ -18,16 +18,19 @@ const newFormHandler = async (event) => {
 
 
   const content = document.getElementById("content").value.trim();
+  // eslint-disable-next-line quotes
+  const post_id = document.querySelector('input[name="post_id"]').value;
 
 
   if (content) {
     const response = await fetch("/api/comments", {
       method: "POST",
-      body: JSON.stringify({ content }),
+      body: JSON.stringify({ content, post_id }),
       headers: {
         "Content-Type": "application/json",
       },
     });
+    console.log(response);
 
     if (response.ok) {
       document.location.reload();
@@ -38,7 +41,7 @@ const newFormHandler = async (event) => {
   // You can add code to send the newComment to your server and update the comments array.
   // After that, you can clear the comment input and hide it again.
   content.value = "";
-  commentInput.style.display = "none";
+  newCommentForm.style.display = "none";
 
 };
 

@@ -69,32 +69,22 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
-router.get("/newpost", withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include:[
-        {
-          model: User,
-          attributes: ["name"],
-        },
-        {
-          model: Game,
-          attributes: ["title", "image"],
-        },
-      ],
-    });
 
-    const user = userData.get({ plain: true });
 
-    res.render("newpost", {
-      ...user,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
+router.get("/newpost", withAuth, (req, res) => {
+
+  res.render("newpost");
+});
+
+
+router.get("/login", (req, res) => {
+  // If user is logged in, redirect to another route
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
   }
+
+  res.render("login");
 });
 
 
@@ -140,29 +130,31 @@ router.get("/game/:id", async (req, res) => {
 
 // "/post/:id/comments"???
 //TODO still need CommentRoutes
-// router.get("/comments/:id", async (req, res) => {
-//   try {
-//     const commentData = await Comment.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ["name"],
-//         },
-//         {
-//           model: Post
-//         }
-//       ],
-//     });
+router.get("post/:id", async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [
+        User, {
+          model: Comment,
+          include: [
+            User
+          ]
+        },
+        {
+          model: Post
+        }
+      ],
+    });
 
-//     const comment = commentData.get({ plain: true });
-//     res.render("post", {
-//       ...comment,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    const comment = commentData.get({ plain: true });
+    res.render("post", {
+      ...comment,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 

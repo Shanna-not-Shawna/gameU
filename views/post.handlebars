@@ -17,6 +17,7 @@
     <form class="form new-comment-form" style="display: none;">
       <div class="form-group">
         <label for="content">Your Comment</label>
+        <input type="hidden" name="post_id" value="{{id}}" />
         <textarea class="form-control" id="content" rows="4" placeholder="Enter your comment"></textarea>
       </div>
       <button type="submit" id="postCommentButton" class="btn btn-primary">Post Comment</button>
