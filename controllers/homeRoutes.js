@@ -130,29 +130,31 @@ router.get("/game/:id", async (req, res) => {
 
 // "/post/:id/comments"???
 //TODO still need CommentRoutes
-// router.get("/comments/:id", async (req, res) => {
-//   try {
-//     const commentData = await Comment.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ["name"],
-//         },
-//         {
-//           model: Post
-//         }
-//       ],
-//     });
+router.get("post/:id", async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [
+        User, {
+          model: Comment,
+          include: [
+            User
+          ]
+        },
+        {
+          model: Post
+        }
+      ],
+    });
 
-//     const comment = commentData.get({ plain: true });
-//     res.render("post", {
-//       ...comment,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    const comment = commentData.get({ plain: true });
+    res.render("post", {
+      ...comment,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
