@@ -69,6 +69,35 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+router.get("/newpost", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include:[
+        {
+          model: User,
+          attributes: ["name"],
+        },
+        {
+          model: Game,
+          attributes: ["title", "image"],
+        },
+      ],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("newpost", {
+      ...user,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 //withAuth required to view profile
 router.get("/profile", withAuth, async (req, res) => {
   try {
@@ -89,29 +118,25 @@ router.get("/profile", withAuth, async (req, res) => {
   }
 });
 
-// router.get("/game/:id", async (req, res) => {
-//   try {
-//     const gameData = await Game.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Post,
-//           attributes: ["name"],
-//         },
-//         {
-//           model: Post
-//         }
-//       ],
-//     });
+router.get("/game/:id", async (req, res) => {
+  try {
+    const gameData = await Game.findByPk(req.params.id, {
+      include: [
+        {
+          model: Post
+        }
+      ],
+    });
 
-//     const game = gameData.get({ plain: true });
-//     res.render("game", {
-//       ...game,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    const game = gameData.get({ plain: true });
+    res.render("game", {
+      ...game,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // "/post/:id/comments"???
 //TODO still need CommentRoutes

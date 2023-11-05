@@ -8,6 +8,9 @@ addCommentButton.addEventListener("click", function() {
   newCommentForm.style.display = "block";
 });
 
+document.getElementById("deleteButton").addEventListener("click", function() {
+  this.textContent = "The internet is forever...";
+});
 
 const newFormHandler = async (event) => {
   event.preventDefault();

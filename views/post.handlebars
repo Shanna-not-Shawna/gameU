@@ -11,7 +11,7 @@
     {{#if logged_in}}
     <button type="button" class="btn btn-outline-dark" id="addCommentButton">Add a Comment</button>
     {{else}}
-    <a class="nav-link" href="/login">Login to Make a Comment</a>
+    <a class="btn btn-primary btn-lg btn-outline-light" href="/login">Login to Make a Comment</a>
     {{/if}}
     
     <form class="form new-comment-form" style="display: none;">
@@ -28,7 +28,8 @@
 
       <h5 class="card-title">{{comment.user.name}}</h5>
         <p class="card-text">{{comment.content}}</p>
+        <button id="deleteButton" class="btn btn-danger">Delete</button>
         {{/each}}
     </div>
 
-<script src="/js/postAndComment.js"></script>
+<script src="/js/comment.js"></script>
