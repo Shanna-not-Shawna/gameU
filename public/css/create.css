@@ -20,7 +20,7 @@ body {
 
 .entrance-sign {
     height: 110px;
-    width: 570px;
+    width: 575px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +33,7 @@ body {
     box-shadow: 0px 0px 10px 5px #00c5ff;
     position: absolute;
     top: 380px;
-   left:-15px;
+   right: -57px;
     
 }
 
@@ -59,7 +59,6 @@ body {
   width: 100%;
   background: none;
   position: relative;
-
   transform: perspective(800px) rotateX(40deg);
  
 }

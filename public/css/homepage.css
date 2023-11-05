@@ -6,19 +6,18 @@ body {
 .nav-container {
     background: none;
 }
-.nav {
+.navbar {
     background: none;
     background-color: black;
-    
 }
 
 .search-container {
     width: 50%;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .search-input {
-    
     color: black;
 }
 
