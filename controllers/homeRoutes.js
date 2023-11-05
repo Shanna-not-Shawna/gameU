@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment
+const { User, Post, Comment, Game
 } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -12,10 +12,14 @@ router.get("/", async (req, res) => {
           model: User,
           attributes: ["name"],
         },
-        // {
-        //   model: Game,
-        //   attributes: [ "title: gameTitle", "image: imgUrl" ],
-        // },
+        {
+          model: Game,
+          attributes: ["title", "image"],
+        },
+        {
+          model: Comment,
+
+        },
       ],
     });
 
@@ -38,13 +42,20 @@ router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
-        {
-          model: User,
-          attributes: ["name"],
+        User, {
+          model: Comment,
+          include: [
+            User
+          ]
         },
-        {
-          model: Comment
-        }
+        // {
+        //   model: User,
+        //   attributes: ["name"],
+        // },
+        // {
+        //   model: Comment
+
+        // }
       ],
     });
 
@@ -78,55 +89,55 @@ router.get("/profile", withAuth, async (req, res) => {
   }
 });
 
-router.get("/game/:id", async (req, res) => {
-  try {
-    const gameData = await Game.findByPk(req.params.id, {
-      include: [
-        {
-          model: Post,
-          attributes: ["name"],
-        },
-        {
-          model: Post
-        }
-      ],
-    });
+// router.get("/game/:id", async (req, res) => {
+//   try {
+//     const gameData = await Game.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: Post,
+//           attributes: ["name"],
+//         },
+//         {
+//           model: Post
+//         }
+//       ],
+//     });
 
-    const game = gameData.get({ plain: true });
-    res.render("game", {
-      ...game,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     const game = gameData.get({ plain: true });
+//     res.render("game", {
+//       ...game,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // "/post/:id/comments"???
 //TODO still need CommentRoutes
-router.get("/comments", async (req, res) => {
-  try {
-    const commentData = await Comment.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-        {
-          model: Post
-        }
-      ],
-    });
+// router.get("/comments/:id", async (req, res) => {
+//   try {
+//     const commentData = await Comment.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ["name"],
+//         },
+//         {
+//           model: Post
+//         }
+//       ],
+//     });
 
-    const comment = commentData.get({ plain: true });
-    res.render("comment", {
-      ...comment,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     const comment = commentData.get({ plain: true });
+//     res.render("post", {
+//       ...comment,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 
 
