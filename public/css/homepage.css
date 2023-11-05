@@ -1,5 +1,58 @@
+
+body {
+    background-color: black;
+    background-image: url("/public/assets/tron10.jpg");
+}
+.nav-container {
+    background: none;
+}
+.nav {
+    background: none;
+    background-color: black;
+    
+}
+
+.search-container {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.search-input {
+    
+    color: black;
+}
+
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #FF5C00;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.search-btn:hover {
+    background-color: black;
+    border: black solid, 2px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    box-shadow: 10px 10px 200px 1px  #FF5C00;
+    color: #FF5C00;
+    scale: 1.1;
+    
+}
+
+.search-container:hover {
+box-shadow: 10px 10px 200px 1px  #FF00E2;
+
+}
+
+
 #requested-games{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 
 }
@@ -8,8 +61,29 @@ img {
     height: 200px;
     /* object-fit: cover; */
 }
-
+.card-container {
+    background-color: aqua;
+    background: linear-gradient(blue, purple);
+    display: flex;
+    justify-content: center;
+    scale: 1.05;
+}
 .card {
     display: flex;
     justify-content: space-between;
+    box-shadow: 0px 1px 100px 1px #00C5FF;
+    border: 2px solid darkgray;
+    border-radius: 10%;
+    overflow:hidden;
+    scale: .95;
+
 }
+
+.card:hover {
+    box-shadow: 0px 1px 200px 1px  #FF5C00;
+    scale: .9;
+    opacity: .3;
+}
+
+
+

@@ -1,11 +1,82 @@
 header {
-    background-image: linear-gradient(to right,#FF5C00 , #00C5FF);
+  background-image: linear-gradient(to right, #ff5c00, #00c5ff);
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navbarSupportedContent {
+    background: none;
+}
+
+.entrance-sign {
+    height: 110px;
+    width: 570px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    border-top-right-radius: 12%;
+    border-top-left-radius: 12%;
+    background-color:#00c5ff;
+    color: #ff5c00;
+    opacity: .5;
+    box-shadow: 0px 0px 10px 5px #00c5ff;
+    position: absolute;
+    top: 380px;
+   left:-15px;
+    
 }
 
+.modal-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: none;
+  scale: 1.6;
+  top: 500px;
+}
+
+.signup-form {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 20px;
+  width: 100%;
+  background: none;
+  position: relative;
+
+  transform: perspective(800px) rotateX(40deg);
+ 
+}
+
+.email-input, 
+.username-input,
+.password-input {
+    margin: 15px; 
+    width: 100%;
+  
+}
+
+.create-btn {
+  background-color:#00c5ff;
+  width: 35%;
+  border: none;
+  border-radius: 10%;
+  scale: 1.2;
+ 
+}
