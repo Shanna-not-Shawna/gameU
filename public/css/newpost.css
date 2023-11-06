@@ -1,0 +1,10 @@
+body {
+  color: white;
+}
+
+.card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}

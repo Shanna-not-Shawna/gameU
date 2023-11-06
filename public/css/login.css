@@ -1,0 +1,82 @@
+body {
+  background-image: url('../assets/neon1.jpg'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire page */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* The image will not scroll with the page */
+}
+
+.containerLg {
+  background-color: black;
+  position: absolute;
+  margin-bottom: 10px;
+  top: 500px;
+  left: 740px;
+  transform: perspective(800px) rotateX(15deg);
+  border-radius: 10%;
+}
+
+.modalTitle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.modal-title {
+  color: white;
+} 
+
+.modal-body label {
+color: white;
+}
+
+.loginBtn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-body login-btn {
+  color: white;
+  }
+
+.modal-header {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.dont-haveAcct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.createAcctBtn {
+  width: 60%;
+}
+
+.logoPng {
+  background-image: url('../assets/gameublue.png'); 
+  width: 200px; 
+  height: 100px; 
+  position: absolute;
+  top: 210px;
+  left: 880px;
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  scale: .8;
+}

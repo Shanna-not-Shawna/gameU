@@ -1,6 +1,30 @@
+body {
+    background-image: url('../assets/neon3.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+.navbar {
+background-color: black;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+}
+
+.container-fluid form {
+    background: none;
+}
+
 #requested-games{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
 
 }
 
@@ -12,11 +36,42 @@ img {
 .card {
     display: flex;
     justify-content: space-between;
+    margin: 5px;
+    background-color: silver;
+    border-radius: 5%;
+    overflow: hidden;
     text-align: center;
 }
 
 .post-img {
     margin: 0 auto;
     width: 50%;
-    height: 50%
+    height: 50%;
+    transform: perspective(800px) rotateX(-3deg);
+    border: 6px black solid;
+    border-radius: 5%;
+
 }
+
+.card-body {
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+    padding: 35px;
+}
+
+.post {
+    margin: 10px auto;
+    background: rgba(0, 0, 0, 0.84);
+    border: none auto;
+   
+}
+
+.select-game-button {
+    text-align: center;
+    background-color: black;
+    font-weight: bolder;
+}
+
+
+

@@ -1,9 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<link rel='stylesheet' href='/css/homepage.css' />
+
+
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <form class="d-flex" role="search" id='game-search-form'>
-      <input class="form-control me-2" id='game-query' type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <div class="search-container">
+      <form class="d-flex search-bar" role="search" id='game-search-form'>
+        <input class="form-control me-2" id='game-query' type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </nav>
 
@@ -22,7 +27,8 @@
       {{#each posts as |post|}}
 
       <div class='post card'>
-        <h5 class="card-title">{{system}}__________<span style="font-size: 0.8em;">(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ. *</span>__________{{category}} </h5>
+        <h5 class="card-title">{{system}}__________<span style="font-size: 0.8em;">(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ.
+            *</span>__________{{category}} </h5>
 
         <h3>{{post.game.title}}</h3>
         <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
@@ -35,8 +41,8 @@
           <a href="/post/{{post.id}}" class="btn btn-primary">Comments</a>
           {{!-- *trying to get this to show all post data and comment data underneath --}}
         </div>
-        </div>
-        {{/each}}
+      </div>
+      {{/each}}
     </main>
 
   </section>

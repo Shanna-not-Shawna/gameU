@@ -80,9 +80,9 @@
         "post_id": 9
     },
     {
-        "content": "This is a test comment!",
-        "user_id": 3,
-        "post_id": 10
+        "content": "First post!",
+        "user_id": 9,
+        "post_id": 11
     },
     {
         "content": "This is a test comment!",
