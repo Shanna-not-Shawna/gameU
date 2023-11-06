@@ -2,20 +2,15 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+gameU is a video game forum for gamers to post game reviews, rants, get advice, learn tips and tricks and brag about their in-game achievements.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Upon page load, the user will see the landing page with the top 9 ranked video games on metacritic. Below the top game cards the user can scroll through the feed of previous posts. Before the user can interact with any existing posts, they will need to click on the "Login" button in the navigation area at the top of the page. After logging in or creating an account, the user can click on the "Make a post" button under a top game title of their choice to make a post about that game. Additionally, they can use the search bar at the top of the page to search for a different game to post about or comment on a previous post.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Here is the deployed app: [Check it out!](https://limitless-mountain-58094-a782c55b0be7.herokuapp.com/)
 
-![alt text](assets/images/screenshot.png)
+![Screenshot of gameU](assets/images/screenshot.png)
 
 ## Credits
 
