@@ -1,3 +1,7 @@
+body {
+  color: white;
+}
+
 .card-title {
   display: flex;
   flex-direction: row;
