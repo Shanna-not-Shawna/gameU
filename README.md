@@ -2,7 +2,7 @@
 
 ## Description
 
-gameU is a video game forum for gamers to post game reviews, rants, get advice, learn tips and tricks and brag about their in-game achievements.
+gameU is a video game forum for gamers to post game reviews, rants, get advice, learn tips and tricks and brag about their in-game achievements. This project was created with 
 
 ## Usage
 
@@ -10,7 +10,7 @@ Upon page load, the user will see the landing page with the top 9 ranked video g
 
 Here is the deployed app: [Check it out!](https://limitless-mountain-58094-a782c55b0be7.herokuapp.com/)
 
-![Screenshot of gameU](assets/images/screenshot.png)
+![Screenshot of gameU](./views/assets/screenshot.png)
 
 ## Credits
 
@@ -25,7 +25,17 @@ RAWG - [API](https://rawg.io/apidocs) <br/>
 
 This project is covered under the MIT License.
 
+## Badges
+
 ![MIT Badge](https://img.shields.io/badge/License-MIT-blue)
+![Static Badge](https://img.shields.io/badge/css-bootstrap-blue)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Handlebars](https://img.shields.io/badge/Handlebars%20js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
 
 
 ## How to Contribute
