@@ -8,7 +8,7 @@ gameU is a video game forum for gamers to post game reviews, rants, get advice, 
 
 Upon page load, the user will see the landing page with the top 9 ranked video games on metacritic. Below the top game cards the user can scroll through the feed of previous posts. Before the user can interact with any existing posts, they will need to click on the "Login" button in the navigation area at the top of the page. After logging in or creating an account, the user can click on the "Make a post" button under a top game title of their choice to make a post about that game. Additionally, they can use the search bar at the top of the page to search for a different game to post about or comment on a previous post.
 
-Here is the deployed app: [Check it out!](https://limitless-mountain-58094-a782c55b0be7.herokuapp.com/)
+Here is the deployed app: [Check it out!](https://limitless-badlands-57272-689f4f7d79cf.herokuapp.com/)
 
 ![Screenshot of gameU](./views/assets/screenshot.png)
 
