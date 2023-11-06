@@ -1,20 +1,21 @@
-<section>
-  <h2>BROUGHT TO YOU BY</h2>
-  <aside class='ad'>
+<link rel='stylesheet' href='/css/profile.css' />
 
-  </aside>
+<section class="brought-by">
+  <h2>BROUGHT TO YOU BY: </h2>
+   <h2> {{name}}</h2>
 </section>
 
 <section>
-  <h2>{{name}}</h2>
+ 
   {{!-- <form id='form'>
     <input type='search' id='query' name='q' placeholder='Search...' />
     <button>Search</button>
   </form> --}}
-  <main>
+  <main class="recent-posts">
     {{#each posts as |post|}}
-
-    <h2>Recent Posts</h2>
+    <div class="your-postsh2">
+    <h2>Recent Post</h2>
+    </div>
     <div class='your-post'>
       <h4 class="card-title">{{post.title}}</h4>
       <p class="card-text">{{post.content}}</p>

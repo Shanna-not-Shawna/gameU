@@ -1,0 +1,50 @@
+body {
+  background-image: url('../assets/neon1.jpg'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire page */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* The image will not scroll with the page */
+}
+ .title-container {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+ background: none;
+ border-radius: 20%;
+ border-radius: 50%;
+}
+.modal-content {
+  background-color: black;
+}
+
+.modal-dialog {
+  position: relative;
+  top: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  border-radius: 20%;
+  transform: perspective(800px) rotateX(15deg);
+}
+
+.logoPng {
+  background-image: url('../assets/gameublue.png'); 
+  width: 200px; 
+  height: 100px; 
+  position: absolute;
+  top: 210px;
+  left: 880px;
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  scale: .8;
+}
+
