@@ -1,14 +1,14 @@
-const newFormHandler = async (event) => {
+const newPostHandler = async (event) => {
   event.preventDefault();
 
   const title = document.querySelector("#post-title").value.trim();
-  const postContent = document.querySelector("#post-content").value.trim();
+  const content = document.querySelector("#post-content").value.trim();
   const system = document.querySelector("#post-system").value.trim();
 
-  if (title && postContent && system) {
+  if (title && system && content ) {
     const response = await fetch("/api/posts", {
       method: "POST",
-      body: JSON.stringify({ title, system, postContent}),
+      body: JSON.stringify({ title, system, content}),
       headers: {
         "Content-Type": "application/json",
       },
@@ -23,26 +23,26 @@ const newFormHandler = async (event) => {
   }
 };
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute("data-id")) {
-    const id = event.target.getAttribute("data-id");
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute("data-id")) {
+//     const id = event.target.getAttribute("data-id");
 
-    const response = await fetch(`/api/posts/${id}`, {
-      method: "DELETE",
-    });
+//     const response = await fetch(`/api/posts/${id}`, {
+//       method: "DELETE",
+//     });
 
-    if (response.ok) {
-      document.location.replace("/profile");
-    } else {
-      alert("Failed to delete post");
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace("/profile");
+//     } else {
+//       alert("Failed to delete post");
+//     }
+//   }
+// };
 
 document
   .querySelector(".new-post-form")
-  .addEventListener("submit", newFormHandler);
+  .addEventListener("submit", newPostHandler);
 
-document
-  .querySelector(".post-list")
-  .addEventListener("click", delButtonHandler);
+// document
+//   .querySelector(".post-list")
+//   .addEventListener("click", delButtonHandler);
