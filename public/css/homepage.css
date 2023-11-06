@@ -12,6 +12,7 @@ img {
 .card {
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .post-img {

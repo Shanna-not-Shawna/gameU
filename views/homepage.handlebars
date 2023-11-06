@@ -1,17 +1,16 @@
-     
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-        <form class="d-flex" role="search" id='game-search-form'>
-        <input class="form-control me-2" id='game-query' type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      </div>
-      </nav>
+    <form class="d-flex" role="search" id='game-search-form'>
+      <input class="form-control me-2" id='game-query' type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 
 
 <div>
   <section class='top-section'>
-<section id="requested-games"></section>
+    <section id="requested-games"></section>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
       fames ac turpis egestas.</p>
   </section>
@@ -25,21 +24,23 @@
       <button class='myProfile'>My Profile</button>
     </div> --}}
     <main class='feed'>
-{{#each posts as |post|}}
-  
-    <div class='post card'>
-      <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
+      {{#each posts as |post|}}
+
+      <div class='post card'>
+        <h5 class="card-title">{{system}}__________<span style="font-size: 0.8em;">(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ. *</span>__________{{category}} </h5>
+
+        <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
         <div class="card-body">
 
-      <h4 class="card-title">{{post.title}} by <b>{{post.user.name}}</b></h4>
+          <h4 class="card-title">{{post.title}} by <b>{{post.user.name}}</b></h4>
 
-      <p class="card-text">{{post.content}}</p>
-      <span style='font-size:30px;'>&#128491;</span>
-      <a href="/post/{{post.id}}" class="btn btn-primary">Comments</a> 
-      {{!-- *trying to get this to show all post data and comment data underneath --}}
-    </div>
-    {{/each}}
-  </main>
+          <p class="card-text">{{post.content}}</p>
+          <span style='font-size:30px;'>&#128491;</span>
+          <a href="/post/{{post.id}}" class="btn btn-primary">Comments</a>
+          {{!-- *trying to get this to show all post data and comment data underneath --}}
+        </div>
+        {{/each}}
+    </main>
 
   </section>
 

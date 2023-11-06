@@ -28,6 +28,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     // comment: [Comment],
     user_id: {
       type: DataTypes.INTEGER,

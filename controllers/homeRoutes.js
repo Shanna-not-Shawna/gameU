@@ -51,6 +51,7 @@ router.get("/post/:id", async (req, res) => {
         },
         {
           model: Game,
+          as: "game",
           attributes: ["title", "image"],
         },
       ],

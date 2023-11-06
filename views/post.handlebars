@@ -1,11 +1,16 @@
-    {{!-- {{log this}} --}}
-    <div class='post card'>
-      {{!-- <img src="https://placehold.co/600x400/EEE/31343C" class="card-img-top" alt="..."> --}}
-        <div class="card-body">
+{{!-- {{log this}} --}}
+<div class='post card'>
+  {{!-- <img src="https://placehold.co/600x400/EEE/31343C" class="card-img-top" alt="..."> --}}
+  <div class="card-body">
+    <h5 class="card-title">{{system}}__________<span style="font-size: 0.8em;">(∩ ͡° ͜ʖ ͡°)⊃━☆ﾟ.
+        *</span>__________{{category}} </h5>
+        
+    <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
 
-      <h2 class="card-title">{{title}} by <b>{{user.name}}</b></h2>
+    <h2 class="card-title">{{title}} by <b>{{user.name}}</b></h2>
+    <h5 class="card-title">{{system}} {{category}} </h5>
 
-      <p class="card-text">{{content}}</p>
+    <p class="card-text">{{content}}</p>
 
 
     {{#if logged_in}}
@@ -13,7 +18,7 @@
     {{else}}
     <a class="btn btn-primary btn-lg btn-outline-light" href="/login">Login to Make a Comment</a>
     {{/if}}
-    
+
     <form class="form new-comment-form" style="display: none;">
       <div class="form-group">
         <label for="content">Your Comment</label>
@@ -24,13 +29,13 @@
     </form>
   </div>
 
-    {{#each comments as |comment|}}
-    <div class="card">
+  {{#each comments as |comment|}}
+  <div class="card">
 
-      <h5 class="card-title">{{comment.user.name}}</h5>
-        <p class="card-text">{{comment.content}}</p>
-        <button id="deleteButton" class="btn btn-danger">Delete</button>
-        {{/each}}
-    </div>
+    <h5 class="card-title">{{comment.user.name}}</h5>
+    <p class="card-text">{{comment.content}}</p>
+    <button id="deleteButton" class="btn btn-danger">Delete</button>
+    {{/each}}
+  </div>
 
-<script src="/js/comment.js"></script>
+  <script src="/js/comment.js"></script>
