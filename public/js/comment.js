@@ -1,6 +1,6 @@
 const addCommentButton = document.getElementById("addCommentButton");
 const newCommentForm = document.querySelector(".new-comment-form");
-//   const postCommentButton = document.getElementById("postCommentButton");
+// const postCommentButton = document.getElementById("postCommentButton");
 
 
 //*browser not happy about event listener for some reason but it still works.

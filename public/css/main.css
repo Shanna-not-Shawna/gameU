@@ -1,4 +1,6 @@
-
+body {
+    color: white;
+}
 .navbar {
     color: white;
     width: 100%;

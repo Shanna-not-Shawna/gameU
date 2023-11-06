@@ -28,6 +28,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     // comment: [Comment],
     user_id: {
       type: DataTypes.INTEGER,
@@ -36,13 +40,13 @@ Post.init(
         key: "id",
       },
     },
-    game_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "game",
-        key: "id",
-      },
-    },
+    // game_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "game",
+    //     key: "id",
+    //   },
+    // },
     comment_id: {
       type: DataTypes.INTEGER,
       references: {
