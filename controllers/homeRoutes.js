@@ -25,6 +25,7 @@ router.get("/", async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
+    posts.sort((a, b) => new Date(b.id) - new Date(a.id));
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
@@ -48,14 +49,10 @@ router.get("/post/:id", async (req, res) => {
             User
           ]
         },
-        // {
-        //   model: User,
-        //   attributes: ["name"],
-        // },
-        // {
-        //   model: Comment
-
-        // }
+        {
+          model: Game,
+          attributes: ["title", "image"],
+        },
       ],
     });
 

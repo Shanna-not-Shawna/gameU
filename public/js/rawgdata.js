@@ -24,7 +24,7 @@ function gamesLoad() {
         const card = document.createElement("div");
         const img = document.createElement("img");
         const h2 = document.createElement("h2");
-        const button = document.createElement("button");
+        const button = document.createElement("a");
 
         card.classList.add("card");
         card.style.width="22rem";
@@ -33,8 +33,19 @@ function gamesLoad() {
         img.setAttribute("src", game.background_image);
         img.style.height="200px";
         h2.textContent = game.name;
+        button.className = ("btn", "btn-primary", "select-game-button");
+        button.setAttribute("href", "/newpost");
         button.textContent = "Make a post";
 
+
+        //         // logic for button click w/ images
+        //         document.querySelectorAll(".select-game-button").forEach(button => {
+        //           button.addEventListener("click", function() {
+        //             const gameCard = this.closest("#requested-games");
+        //             const
+        //           })
+        //         })
+        // **************************************************************************
 
         // *****logic for "make a post" button to save gameTitle and imgUrl to database
         button.addEventListener("click", ()=> {
@@ -94,7 +105,7 @@ function gameSearch(event) {
         const card = document.createElement("div");
         const img = document.createElement("img");
         const h2 = document.createElement("h2");
-        const button = document.createElement("button");
+        const button = document.createElement("a");
 
         card.classList.add("card");
         card.style.width="22rem";
@@ -103,6 +114,8 @@ function gameSearch(event) {
         img.setAttribute("src", game.background_image);
         img.style.height="200px";
         h2.textContent = game.name;
+        button.className = ("btn", "btn-primary");
+        button.setAttribute("href", "/newpost");
         button.textContent = "Make a post";
 
 
