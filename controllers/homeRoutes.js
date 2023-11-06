@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
         },
         {
           model: Game,
-          attributes: ["title", "image"],
+          // attributes: ["title", "image"],
         },
         {
           model: Comment,
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
 
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
-    posts.sort((a, b) => new Date(b.id) - new Date(a.id));
+    // posts.sort((a, b) => new Date(b.id) - new Date(a.id));
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
@@ -51,9 +51,9 @@ router.get("/post/:id", async (req, res) => {
         },
         {
           model: Game,
-          as: "game",
-          attributes: ["title", "image"],
+
         },
+
       ],
     });
 
@@ -68,22 +68,53 @@ router.get("/post/:id", async (req, res) => {
 });
 
 
+router.get("/newpost", (req, res) => {
 
-router.get("/newpost", withAuth, (req, res) => {
+
 
   res.render("newpost");
 });
 
 
-router.get("/login", (req, res) => {
-  // If user is logged in, redirect to another route
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
+// router.get("/newpost", withAuth, async (req, res) => {
+//   try {
 
-  res.render("login");
-});
+//     const gameData = await Game.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: Game,
+
+//         },
+//       ],
+//     });
+
+//     if (!gameData) {
+//       // Handle the case where the game with the provided ID doesn't exist
+//       // You can redirect, display an error, or handle it as needed
+//       res.status(404).send("Game not found");
+//       return;
+//     }
+
+//     const game = gameData.get({ plain: true });
+
+//     res.render("newpost", {
+//       game, // Pass the game data to your "newpost" template
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get("/login", (req, res) => {
+//   // If user is logged in, redirect to another route
+//   if (req.session.logged_in) {
+//     res.redirect("/");
+//     return;
+//   }
+
+//   res.render("login");
+// });
 
 
 //withAuth required to view profile
@@ -92,7 +123,17 @@ router.get("/profile", withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Post }],
+      include: [
+        {
+          model: Post
+        },
+        // Post, {
+        //   model: Game,
+        //   include: [
+        //     Post
+        //   ]
+        // },
+      ],
     });
 
     const user = userData.get({ plain: true });

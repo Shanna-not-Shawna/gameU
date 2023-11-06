@@ -38,14 +38,7 @@ function gamesLoad() {
         button.textContent = "Make a post";
 
 
-        // logic for button click w/ images
-        // document.querySelectorAll(".select-game-button").forEach(button => {
-        //   button.addEventListener("click", function() {
-        //     const gameCard = this.closest("#requested-games");
-        //     const selectedGameImg = gameCard.querySelector;
-        //   });
-        // });
-        // **************************************************************************
+
 
         // *****logic for "make a post" button to save gameTitle and imgUrl to database
         button.addEventListener("click", ()=> {

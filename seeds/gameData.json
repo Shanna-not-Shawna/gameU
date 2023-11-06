@@ -1,28 +1,33 @@
 [
     {
         
-        "title": "Local Game Test Title 1",
+        "title": "Pokemon Snap",
         "image": "https://media.rawg.io/media/games/ec4/ec4be61f0f41cf1d138501330a1b54ee.jpg"
 
     },
     {
         
-        "title": "Local Game Test Title 2",
+        "title": "The Last of Us",
         "image": "https://media.rawg.io/media/games/a5a/a5a7fb8d9cb8063a8b42ee002b410db6.jpg"
     },
     {
         
-        "title": "Local Game Test Title 3",
+        "title": "Super Mario Bros.",
         "image": "https://media.rawg.io/media/screenshots/f22/f22857f426275f7a09d865a2ad2376b9.jpg"
     },
     {
         
-        "title": "Local Game Test Title 4",
+        "title": "Sonic Adventure",
         "image": "https://media.rawg.io/media/games/566/566b771293b3e8aee0c071a02e81d925.jpg"
     },
     {
         
-        "title": "Local Game Test Title 5",
+        "title": "Mario Tennis",
         "image": "https://media.rawg.io/media/screenshots/5a2/5a2a41c745ae3120ce01399094b5b5d4.jpg"
+    },
+    {
+        
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "image": "https://media.rawg.io/media/games/cc1/cc196a5ad763955d6532cdba236f730c.jpg"
     }
 ]
