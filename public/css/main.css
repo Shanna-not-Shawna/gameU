@@ -1,2 +1,11 @@
 
+.navbar {
+    color: white;
+    width: 100%;
+    background-color: black;
+}
+
+.card {
+    border: none;
+}
 

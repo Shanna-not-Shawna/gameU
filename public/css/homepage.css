@@ -1,58 +1,30 @@
-
 body {
-    background-color: black;
-    background-image: url("/public/assets/tron10.jpg");
-}
-.nav-container {
-    background: none;
+    background-image: url('../assets/neon3.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 .navbar {
-    background: none;
-    background-color: black;
+background-color: black;
 }
 
 .search-container {
-    width: 50%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.search-input {
-    color: black;
-}
-
-
-.search-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background: none;
-    border: none;
-    color: #FF5C00;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: x-large;
-    font-weight: bolder;
 }
 
-.search-btn:hover {
-    background-color: black;
-    border: black solid, 2px;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius: 5%;
-    box-shadow: 10px 10px 200px 1px  #FF5C00;
-    color: #FF5C00;
-    scale: 1.1;
-    
+.container-fluid form {
+    background: none;
 }
-
-.search-container:hover {
-box-shadow: 10px 10px 200px 1px  #FF00E2;
-
-}
-
 
 #requested-games{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
 
 }
 
@@ -60,28 +32,44 @@ img {
     height: 200px;
     /* object-fit: cover; */
 }
-.card-container {
-    background-color: aqua;
-    background: linear-gradient(blue, purple);
-    display: flex;
-    justify-content: center;
-    scale: 1.05;
-}
+
 .card {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 1px 100px 1px #00C5FF;
-    border: 2px solid darkgray;
-    border-radius: 10%;
-    overflow:hidden;
-    scale: .95;
+    margin: 5px;
+    background-color: silver;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.post-img {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    transform: perspective(800px) rotateX(-3deg);
+    border: 6px black solid;
+    border-radius: 5%;
 
 }
 
-.card:hover {
-    box-shadow: 0px 1px 200px 1px  #FF5C00;
-    scale: .9;
-    opacity: .3;
+.card-body {
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+    padding: 35px;
+}
+
+.post {
+    margin: 10px auto;
+    background: none;
+    border: none auto;
+   
+}
+
+.select-game-button {
+    text-align: center;
+    background-color: black;
+    font-weight: bolder;
 }
 
 

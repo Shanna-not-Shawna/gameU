@@ -1,22 +1,21 @@
-<div class="login-container">
-  <!-- Login form and other content go here -->
-  <img src="./assets/profilet7.jpg" class="background-image" alt="Background Image">
-</div>
-<section class="center-container">
-<div class="username-container">
-<section>
+<link rel='stylesheet' href='/css/profile.css' />
+
+<section class="brought-by">
   <h2>BROUGHT TO YOU BY: </h2>
-  </section>
-  <section>
-  <h2> {{name}}</h2>
+   <h2> {{name}}</h2>
+</section>
+
+<section>
+ 
   {{!-- <form id='form'>
     <input type='search' id='query' name='q' placeholder='Search...' />
     <button>Search</button>
   </form> --}}
-  <main>
+  <main class="recent-posts">
     {{#each posts as |post|}}
-
-    <h2>Recent Posts</h2>
+    <div class="your-postsh2">
+    <h2>Recent Post</h2>
+    </div>
     <div class='your-post'>
       <h4 class="card-title">{{post.title}}</h4>
       <p class="card-text">{{post.content}}</p>
@@ -26,42 +25,5 @@
 
   </main>
 </section>
-</div>
-  <aside class='ad'>
-
-  </aside>
-
-  <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">GameU</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            {{#if logged_in}}
-            <a class="nav-link" href="/profile">Profile</a> 
-            </li>
-            <li>
-            <button class="no-button btn btn-dark" id="logout">Logout</button>
-            {{else}}
-            <a class="nav-link" href="/login">Login</a>
-            {{/if}}
-          </li>
-
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-<main class="main-page">
-  <div>
-
-  </div>
-</main>
-</section>
-
- 
 <script src="/js/newpost.js"></script>
+<script src="/js/comment.js"></script>

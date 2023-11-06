@@ -1,22 +1,50 @@
-body {
-    background-color: black;
-    
-}
-
-.username-container {
+.brought-by {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    background-color: black;
     color: white;
+
+    width: 50vw;
 }
 
-.main-page {
+.recent-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+    width: 50vw;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+
+.your-post {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80vh;
-    border: 5px solid white;
-    background-color: black;
-    
+    background:none;
+    padding: 10px;
 }
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    color: #00C5FF;
+    width: 75%;
+    padding: 10px;
+}
+
+.card-text {
+    background-color: rgb(55, 55, 55);
+    width: 75%;
+    color: #FF5C00;
+    font-weight: bolder;
+}
+

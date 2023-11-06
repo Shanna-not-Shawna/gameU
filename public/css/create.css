@@ -1,81 +1,50 @@
-header {
-  background-image: linear-gradient(to right, #ff5c00, #00c5ff);
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-image: url('../assets/neon1.jpg'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire page */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* The image will not scroll with the page */
 }
-
-.nav-container {
+ .title-container {
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-
-#navbarSupportedContent {
-    background: none;
-}
-
-.entrance-sign {
-    height: 110px;
-    width: 575px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 12%;
-    border-top-left-radius: 12%;
-    background-color:#00c5ff;
-    color: #ff5c00;
-    opacity: .5;
-    box-shadow: 0px 0px 10px 5px #00c5ff;
-    position: absolute;
-    top: 380px;
-   right: -57px;
-    
-}
-
-.modal-content {
-  color: white;
+ }
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  width: 25vw;
+ background: none;
+ border-radius: 20%;
+ border-radius: 50%;
+}
+.modal-content {
+  background-color: black;
+}
+
+.modal-dialog {
+  position: relative;
+  top: 500px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  background: none;
-  scale: 1.6;
-  top: 500px;
+  background-color: black;
+  border-radius: 20%;
+  transform: perspective(800px) rotateX(15deg);
 }
 
-.signup-form {
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    top: 20px;
-  width: 100%;
-  background: none;
-  position: relative;
-  transform: perspective(800px) rotateX(40deg);
- 
+.logoPng {
+  background-image: url('../assets/gameublue.png'); 
+  width: 200px; 
+  height: 100px; 
+  position: absolute;
+  top: 210px;
+  left: 880px;
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  scale: .8;
 }
 
-.email-input, 
-.username-input,
-.password-input {
-    margin: 15px; 
-    width: 100%;
-  
-}
-
-.create-btn {
-  background-color:#00c5ff;
-  width: 35%;
-  border: none;
-  border-radius: 10%;
-  scale: 1.2;
- 
-}
