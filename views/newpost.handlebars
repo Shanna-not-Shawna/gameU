@@ -2,29 +2,39 @@
 
 <div class='post card'>
     <div class="card-body">
-        <form>
-            <div class="form-group">
-                <label for="post-title">Post Title:</label>
-                <input type="text" class="form-control" id="post-title" name="post-title" placeholder="Title...">
-            </div>
-            <div class="form-group">
-                <label for="post-system">Game System:</label>
-                <select class="form-control" name="post-system" id="post-system">
-                    <option>PC</option>
-                    <option>Xbox</option>
-                    <option>PlayStation</option>
-                    <option>Nintendo</option>
-                    <option>DON'T WORRY ABOUT IT!!</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="post-content">Post Content:</label>
-                <textarea class="form-control" id="post-content" name="post-content" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create Post</button>
-            </div>
+        <form class="form new-post-form">
+
+            <div class='post card'>
+
+                <img src="{{post.game.image}}" class=" post-img card-img-top" alt="{{post.game.title}}">
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="post-title">Post Title:</label>
+                        <input type="text" class="form-control" id="post-title" name="post-title"
+                            placeholder="Title...">
+                    </div>
+                    <div class="form-group">
+                        <label for="post-system">Game System:</label>
+                        <select class="form-control" name="post-system" id="post-system">
+                            <option>PC</option>
+                            <option>Xbox</option>
+                            <option>PlayStation</option>
+                            <option>Nintendo</option>
+                            <option>DON'T WORRY ABOUT IT!!</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Post Content:</label>
+                        <textarea class="form-control" id="post-content" name="post-content" rows="5"></textarea>
+                    </div>
+                    <input type="hidden" id="selected-game-title" name="selected-game-title">
+                    <input type="hidden" id="selected-game-image" name="selected-game-image">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Create Post</button>
+                    </div>
         </form>
     </div>
 </div>
+<script src="/js/rawgdata.js"></script>
 <script src="/js/newpost.js"></script>
